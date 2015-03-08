@@ -168,7 +168,7 @@ public class WordCount {
 			fop = new FileOutputStream(file);
 			for (String key : sortedMap.keySet()) {
 				counter++;
-				String output = key + " " + sortedMap.get(key);
+				String output = String.format("%-14s%s", key,sortedMap.get(key));
 				if (counter != sortedMap.size()) {
 					output += "\n";
 				}
